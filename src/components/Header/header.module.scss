@@ -1,13 +1,13 @@
-.container {
-    margin: 0 auto;
-    max-width: 980px;
-}
+$white: #edecec;
+$white-two: #fefefe;
+$white-three: #fbfbfb;
 
 .header {
     height: 101px;
-    padding: 30px 261px 26px 260px;
+    padding-top: 30px;
     box-shadow: 0px 1px 0 0 #ebebeb;
-    background-image: linear-gradient(to top, #fbfbfb, #fefefe);
+    background-image: linear-gradient(to top, $white-three, $white-two);
+    margin-bottom: 50px;
 }
 
 .body {

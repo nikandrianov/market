@@ -1,16 +1,16 @@
 import React from 'react';
-import './header.scss';
+import style from'./header.module.scss';
 import Nav from '../Nav';
-import Basket from '../Basket';
+import Cart from '../Cart';
 
 const Header = () => {
     return (
-        <header className="header">
+        <header className={style.header}>
             <div className="container">
-                <div className="body">
-                    <a href="#" className="logo">la market</a>
+                <div className={style.body}>
+                    <a href="#" className={style.logo}>la market</a>
                     <Nav />
-                    <Basket />
+                    <Cart />
                 </div>
             </div>
         </header>
