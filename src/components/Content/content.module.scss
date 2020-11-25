@@ -1,0 +1,41 @@
+$grey-line: #acacac;
+
+.title {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #656363;
+        text-transform: uppercase;
+    }
+    &:before {
+        content: '';
+        width: 70px;
+        height: 1px;
+        background-color: $grey-line;
+        margin-right: 10px;
+    }
+    &:after {
+        content: '';
+        width: 70px;
+        height: 1px;
+        background-color: $grey-line;
+        margin-left: 10px;
+    }
+}
+
+.content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
