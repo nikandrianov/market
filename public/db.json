@@ -1,0 +1,52 @@
+{
+    "men": [
+        {
+            "id": 1,
+            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "name": "Coalesce: Functioning On Impatience T-Shirt",
+            "price": 150,
+            "color": "green",
+            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
+        },
+        {
+            "id": 2,
+            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "name": "Ink Eater: Krylon Bombear Destroyed Tee",
+            "price": 22,
+            "color": "white",
+            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
+        },
+        {
+            "id": 3,
+            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "name": "The Only Children: Paisley T-Shirt",
+            "price": 55,
+            "color": "white",
+            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
+        },
+        {
+            "id": 4,
+            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "name": "Coalesce: Functioning On Impatience T-Shirt",
+            "price": 150,
+            "color": "green",
+            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
+        },
+        {
+            "id": 5,
+            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "name": "Zolof The Rock And Roll Destroyer: LOL Cat T-shirt",
+            "price": 13,
+            "color": "red",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, ipsam!"
+        },
+        {
+            "id": 6,
+            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "name": "The Get Up Kids: Band Camp Pullover Hoodie",
+            "price": 12,
+            "color": "green",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, ipsam!"
+        }
+    ]
+}

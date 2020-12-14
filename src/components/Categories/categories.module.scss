@@ -1,24 +1,24 @@
 .category {
-  margin-top: 30px;
-  ul {
-    display: flex;
-    font-size: 14px;
-    letter-spacing: 0.48px;
-    color: #7f7f7f;
-  }
-  li {
-    margin-right: 30px;
-    &:hover {
-      color: #3a3a3a;
-      cursor: pointer;
+    margin-top: 30px;
+    ul {
+        display: flex;
+        font-size: 14px;
+        letter-spacing: 0.48px;
+        color: #7f7f7f;
     }
-  }
-  li:last-child {
-    margin-right: 0;
-  }
+    li {
+        margin-right: 30px;
+        &:hover {
+            color: #3a3a3a;
+            cursor: pointer;
+        }
+    }
+    li:last-child {
+        margin-right: 0;
+    }
 }
 
 .active {
-  color: #3a3a3a;
-  font-weight: 700;
+    color: #3a3a3a;
+    font-weight: 700;
 }
