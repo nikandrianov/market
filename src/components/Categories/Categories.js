@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './categories.module.scss';
 
 const Categories = ({ items }) => {
-    const [state, setState] = useState(null);
+    const [state, setState] = React.useState(null);
 
     const onSelectItem = (index) => {
         setState(index);
