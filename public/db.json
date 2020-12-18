@@ -1,51 +1,51 @@
 {
-    "man": [
+    "clothes": [
         {
             "id": 1,
-            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "img": "https://nosmag.ru/uploads/photos/81323304e264f174490d4cdee809a3b2.jpg",
             "name": "Coalesce: Functioning On Impatience T-Shirt",
             "price": 150,
-            "color": "green",
+            "category": "man",
             "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
         },
         {
             "id": 2,
-            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "img": "https://files.voenpro.ru/products/majka-rossiya-31.655x459.jpg",
             "name": "Ink Eater: Krylon Bombear Destroyed Tee",
             "price": 22,
-            "color": "white",
+            "category": "man",
             "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
         },
         {
             "id": 3,
-            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "img": "https://oztrend.ru/image/cache/catalog/whatsappimage2019-06-18at17.49.08-600x600.jpeg",
             "name": "The Only Children: Paisley T-Shirt",
             "price": 55,
-            "color": "white",
+            "category": "woman",
             "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
         },
         {
             "id": 4,
-            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "img": "https://www.lagaz.ru/data/medium/zhenskaya_futbolka_F01MC064012.jpg",
             "name": "Coalesce: Functioning On Impatience T-Shirt",
             "price": 150,
-            "color": "green",
+            "category": "woman",
             "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
         },
         {
             "id": 5,
-            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "img": "https://www.lagaz.ru/data/big/muzhskaya_futbolka_fallin_fuckoff_cat_M01OT121031.jpg",
             "name": "Zolof The Rock And Roll Destroyer: LOL Cat T-shirt",
             "price": 13,
-            "color": "red",
+            "category": "man",
             "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, ipsam!"
         },
         {
             "id": 6,
-            "img": "https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png",
+            "img": "https://i.pinimg.com/originals/03/0b/af/030bafcb2d75f4f6da39d4ab4bd13d6c.jpg",
             "name": "The Get Up Kids: Band Camp Pullover Hoodie",
             "price": 12,
-            "color": "green",
+            "category": "man",
             "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, ipsam!"
         }
     ]

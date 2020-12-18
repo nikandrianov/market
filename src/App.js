@@ -5,16 +5,13 @@ import Cart from './pages/Cart';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import axios from 'axios';
-import { setClothes } from './redux/actions/clothes';
+import { fetchClothes } from './redux/actions/clothes';
 
 function App() {
     const dispatch = useDispatch();
 
     React.useEffect(() => {
-        axios.get('http://localhost:3000/db.json').then(({ data }) => {
-            dispatch(setClothes(data.man));
-        });
+        dispatch(fetchClothes());
     }, []);
 
     return (

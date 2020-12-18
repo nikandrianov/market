@@ -1,16 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import style from './home.module.scss';
+import { setCategory } from '../../redux/actions/filters';
 
 import Card from '../../components/Card';
 import Categories from '../../components/Categories';
 
 const Home = () => {
-    const { items } = useSelector(({ clothes }) => {
-        return {
-            items: clothes.items,
-        };
-    });
+    const dispatch = useDispatch();
+    const items = useSelector(({ clothes }) => clothes.items);
+
+    const onSelectCategory = (index) => {
+        dispatch(setCategory(index));
+    };
 
     return (
         <main>
@@ -18,12 +20,10 @@ const Home = () => {
                 <div className={style.title}>
                     <span>products</span>
                 </div>
-                <Categories items={['Green', 'White', 'Red']} />
+                <Categories items={['Man', 'Woman']} onClickItem={onSelectCategory} />
                 <div className={style.content}>
                     <div className={style.body}>
-                        {items.map((obj) => (
-                            <Card key={obj.id} {...obj} />
-                        ))}
+                        {items && items.map((obj) => <Card key={obj.id} {...obj} />)}
                     </div>
                 </div>
             </div>

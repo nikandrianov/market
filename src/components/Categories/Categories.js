@@ -1,11 +1,12 @@
 import React from 'react';
 import style from './categories.module.scss';
 
-const Categories = ({ items }) => {
+const Categories = ({ items, onClickItem }) => {
     const [state, setState] = React.useState(null);
 
     const onSelectItem = (index) => {
         setState(index);
+        onClickItem(index);
     };
 
     return (
