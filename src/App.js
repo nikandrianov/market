@@ -4,16 +4,8 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { fetchClothes } from './redux/actions/clothes';
 
 function App() {
-    const dispatch = useDispatch();
-
-    React.useEffect(() => {
-        dispatch(fetchClothes());
-    }, []);
-
     return (
         <Router>
             <div className="App">

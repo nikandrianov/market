@@ -5,7 +5,7 @@
             "img": "https://nosmag.ru/uploads/photos/81323304e264f174490d4cdee809a3b2.jpg",
             "name": "Coalesce: Functioning On Impatience T-Shirt",
             "price": 150,
-            "category": "man",
+            "category": 0,
             "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
         },
         {
@@ -13,7 +13,7 @@
             "img": "https://files.voenpro.ru/products/majka-rossiya-31.655x459.jpg",
             "name": "Ink Eater: Krylon Bombear Destroyed Tee",
             "price": 22,
-            "category": "man",
+            "category": 0,
             "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
         },
         {
@@ -21,7 +21,7 @@
             "img": "https://oztrend.ru/image/cache/catalog/whatsappimage2019-06-18at17.49.08-600x600.jpeg",
             "name": "The Only Children: Paisley T-Shirt",
             "price": 55,
-            "category": "woman",
+            "category": 1,
             "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
         },
         {
@@ -29,7 +29,7 @@
             "img": "https://www.lagaz.ru/data/medium/zhenskaya_futbolka_F01MC064012.jpg",
             "name": "Coalesce: Functioning On Impatience T-Shirt",
             "price": 150,
-            "category": "woman",
+            "category": 1,
             "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, quo?"
         },
         {
@@ -37,7 +37,7 @@
             "img": "https://www.lagaz.ru/data/big/muzhskaya_futbolka_fallin_fuckoff_cat_M01OT121031.jpg",
             "name": "Zolof The Rock And Roll Destroyer: LOL Cat T-shirt",
             "price": 13,
-            "category": "man",
+            "category": 0,
             "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, ipsam!"
         },
         {
@@ -45,7 +45,7 @@
             "img": "https://i.pinimg.com/originals/03/0b/af/030bafcb2d75f4f6da39d4ab4bd13d6c.jpg",
             "name": "The Get Up Kids: Band Camp Pullover Hoodie",
             "price": 12,
-            "category": "man",
+            "category": 0,
             "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, ipsam!"
         }
     ]

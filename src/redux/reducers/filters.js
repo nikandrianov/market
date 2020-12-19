@@ -1,7 +1,7 @@
 import { SET_CATEGORY } from '../actions/types';
 
 const initialState = {
-    category: '',
+    category: null,
 };
 
 const filters = (state = initialState, action) => {
