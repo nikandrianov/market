@@ -12,13 +12,19 @@ const Nav = () => {
                     </Link>
                 </li>
                 <li>
-                    <a className={style.link}>About</a>
+                    <Link to="#" className={style.link}>
+                        About
+                    </Link>
                 </li>
                 <li>
-                    <a className={style.link}>Blog</a>
+                    <Link to="#" className={style.link}>
+                        Blog
+                    </Link>
                 </li>
                 <li>
-                    <a className={style.link}>Support</a>
+                    <Link to="#" className={style.link}>
+                        Support
+                    </Link>
                 </li>
             </ul>
         </nav>
