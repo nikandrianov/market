@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import style from './home.module.scss';
 import { setCategory } from '../../redux/actions/filters';
 import { fetchClothes } from '../../redux/actions/clothes';
+import { addToCart } from '../../redux/actions/cart';
 
 import Card from '../../components/Card';
 import Categories from '../../components/Categories';
@@ -20,6 +21,10 @@ const Home = () => {
         dispatch(setCategory(index));
     };
 
+    const addItemsCart = (obj) => {
+        dispatch(addToCart(obj));
+    };
+
     return (
         <main>
             <div className="container">
@@ -33,7 +38,10 @@ const Home = () => {
                 />
                 <div className={style.content}>
                     <div className={style.body}>
-                        {items && items.map((obj) => <Card key={obj.id} {...obj} />)}
+                        {items &&
+                            items.map((obj) => (
+                                <Card key={obj.id} {...obj} onClickAdd={addItemsCart} />
+                            ))}
                     </div>
                 </div>
             </div>

@@ -19,6 +19,15 @@
     border-color: #333;
     color: #333;
     font-weight: 900;
+    &:hover {
+        background-color: #333;
+        color: #fff;
+    }
+    &:active {
+        background-color: #333;
+        color: #fff;
+        transform: translateY(1px);
+    }
 }
 
 .cart {
@@ -54,6 +63,11 @@
         margin-left: 7px;
         color: #b6b6b6;
         font-size: 18px;
+    }
+    &:hover {
+        span {
+            color: #232323;
+        }
     }
 }
 
@@ -169,11 +183,17 @@
     align-items: center;
     justify-content: center;
     width: 210px;
-    border-color: #ddd;
+    border-color: rgb(153, 153, 153);
     span {
-        color: #c3c3c3;
+        color: rgb(153, 153, 153);
         font-size: 16px;
         font-weight: 600;
+    }
+    &:hover {
+        background-color: rgb(153, 153, 153);
+        span {
+            color: #fff;
+        }
     }
 }
 
@@ -193,4 +213,9 @@
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
     border: 1px solid transparent;
     user-select: none;
+    &:hover {
+        background-color: #fff;
+        color: #fe5f1e;
+        border-color: #fe5f1e;
+    }
 }

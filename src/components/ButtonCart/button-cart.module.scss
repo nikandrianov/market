@@ -1,7 +1,10 @@
 $warm-grey: #7f7e7e;
 
 .cart {
-    width: 70px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    max-width: 350px;
     height: 45px;
     box-shadow: 0px 1px 0 0 #ffffff;
     border: solid 2px $warm-grey;
@@ -12,6 +15,12 @@ $warm-grey: #7f7e7e;
         width: 28px;
         height: 25px;
         object-fit: contain;
+        margin-right: 5px;
+    }
+    span {
+        color: $warm-grey;
+        font-weight: 700;
+        font-size: 16px;
     }
     &:hover {
         background-color: #ffffff;

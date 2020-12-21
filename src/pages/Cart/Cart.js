@@ -1,7 +1,5 @@
 import React from 'react';
 import style from './cart.module.scss';
-
-import trash from '../../assets/img/icons/trash.svg';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
@@ -11,7 +9,6 @@ const Cart = () => {
                 <div className={style.top}>
                     <h2 className={style.title}>Корзина</h2>
                     <div className={style.clear}>
-                        <img src={trash} alt="trash" />
                         <span>Очистить корзину</span>
                     </div>
                 </div>

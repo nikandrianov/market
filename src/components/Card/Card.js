@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './card.module.scss';
 
-const Card = ({ name, img, price, text }) => {
+const Card = ({ id, name, img, price, text, onClickAdd }) => {
+    const handleOnClickItem = () => {
+        onClickAdd({ id, name, img, price });
+    };
+
     return (
         <div className={style.column}>
             <div className={style.item}>
@@ -11,8 +15,10 @@ const Card = ({ name, img, price, text }) => {
                 </div>
                 <div className={style.name}>{name}</div>
                 <div className={style.price}>
-                    <div className={style.cost}>${price}</div>
-                    <button className={style.addbtn}>Add to Cart</button>
+                    <div className={style.cost}>{price} ₽</div>
+                    <button className={style.addbtn} onClick={handleOnClickItem}>
+                        Add to Cart
+                    </button>
                 </div>
                 <div className={style.text}>
                     <p>{text}</p>
@@ -23,10 +29,12 @@ const Card = ({ name, img, price, text }) => {
 };
 
 Card.propTypes = {
+    id: PropTypes.number,
     name: PropTypes.string,
     img: PropTypes.string,
     price: PropTypes.number,
     text: PropTypes.string,
+    onClickAdd: PropTypes.func,
 };
 
 Card.defaultProps = {
