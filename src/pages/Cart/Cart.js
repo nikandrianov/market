@@ -1,60 +1,67 @@
 import React from 'react';
 import style from './cart.module.scss';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearCart } from '../../redux/actions/cart';
+
+import CartItem from '../../components/CartItem/CartItem';
+import CartFree from '../CartFree';
 
 const Cart = () => {
+    const dispatch = useDispatch();
+    const { items, totalPrice, totalCount } = useSelector(({ cart }) => cart);
+    const clothesGroup = Object.keys(items).map((elem) => {
+        return items[elem].items[0];
+    });
+
+    const onClearCart = () => {
+        if (window.confirm('Вы уверены что хотите очистить корзину?')) {
+            dispatch(clearCart());
+        }
+    };
+
     return (
         <div className="container">
-            <div className={style.cart}>
-                <div className={style.top}>
-                    <h2 className={style.title}>Корзина</h2>
-                    <div className={style.clear}>
-                        <span>Очистить корзину</span>
+            {totalCount ? (
+                <div className={style.cart}>
+                    <div className={style.top}>
+                        <h2 className={style.title}>Корзина</h2>
+                        <div className={style.clear}>
+                            <span onClick={onClearCart}>Очистить корзину</span>
+                        </div>
                     </div>
-                </div>
-                <div className={style.content}>
-                    <div className={style.item}>
-                        <div className={style.item_img}>
-                            <img
-                                src="https://neuronsk.ru/upload/medialibrary/771/771dad7444a2937b6085360951e048b1.png"
-                                alt=""
+                    <div className={style.content}>
+                        {clothesGroup.map((obj) => (
+                            <CartItem
+                                key={obj.id}
+                                {...obj}
+                                totalPrice={items[obj.id].totalPrice}
+                                totalCount={items[obj.id].items.length}
                             />
+                        ))}
+                    </div>
+                    <div className={style.bottom}>
+                        <div className={style.details}>
+                            <span>
+                                Всего: <b>{totalCount} шт.</b>
+                            </span>
+                            <span>
+                                Сумма заказа: <b>{totalPrice} ₽</b>
+                            </span>
                         </div>
-                        <div className={style.item_info}>
-                            <h3>Майка</h3>
-                        </div>
-                        <div className={style.count}>
-                            <div className={style.button_minus}>-</div>
-                            <b>2</b>
-                            <div className={style.button_plus}>+</div>
-                        </div>
-                        <div className={style.item_price}>
-                            <b>770 ₽</b>
-                        </div>
-                        <div className={style.item_remove}>
-                            <div className={style.button_remove}>x</div>
+                        <div className={style.bottom_buttons}>
+                            <Link to="/" className={style.button_back}>
+                                <span>Вернуться назад</span>
+                            </Link>
+                            <div className={style.button_pay}>
+                                <span>Оплатить сейчас</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className={style.bottom}>
-                    <div className={style.details}>
-                        <span>
-                            Всего: <b>3 шт.</b>
-                        </span>
-                        <span>
-                            Сумма заказа: <b>900 ₽</b>
-                        </span>
-                    </div>
-                    <div className={style.bottom_buttons}>
-                        <Link to="/" className={style.button_back}>
-                            <span>Вернуться назад</span>
-                        </Link>
-                        <div className={style.button_pay}>
-                            <span>Оплатить сейчас</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            ) : (
+                <CartFree />
+            )}
         </div>
     );
 };

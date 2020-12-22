@@ -1,37 +1,5 @@
-@mixin btn-count {
-    border-radius: 30px;
-    padding: 10px 20px;
-    min-width: 100px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-    border: 1px solid transparent;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-    padding: 0;
-    border-width: 2px;
-    background-color: #fff;
-    border-color: #333;
-    color: #333;
-    font-weight: 900;
-    &:hover {
-        background-color: #333;
-        color: #fff;
-    }
-    &:active {
-        background-color: #333;
-        color: #fff;
-        transform: translateY(1px);
-    }
-}
-
 .cart {
-    height: 100vh;
+    min-height: calc(100vh - 50px);
 }
 
 .top {
@@ -75,79 +43,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.item {
-    display: flex;
-    width: 100%;
-    border-top: 1px solid #f6f6f6;
-    padding-top: 30px;
-    margin-top: 30px;
-}
-
-.item_img {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-    width: 10%;
-    img {
-        width: 80px;
-        height: 80px;
-    }
-}
-
-.item_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 40%;
-    h3 {
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 27px;
-        letter-spacing: 0.01em;
-    }
-}
-
-.count {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 13%;
-    b {
-        font-size: 22px;
-    }
-}
-
-.button_minus {
-    @include btn-count;
-}
-
-.button_plus {
-    @include btn-count;
-}
-
-.item_price {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 33%;
-    b {
-        font-weight: bold;
-        font-size: 22px;
-        letter-spacing: 0.01em;
-    }
-}
-
-.item_remove {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 4%;
-}
-
-.button_remove {
-    @include btn-count;
 }
 
 .bottom {

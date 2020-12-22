@@ -1,4 +1,4 @@
-import { ADD_ITEMS_CART, SET_TOTAL_PRICE, SET_TOTAL_COUNT } from '../actions/types';
+import { ADD_ITEMS_CART, CLEAR_CART } from '../actions/types';
 
 const initialState = {
     items: {},
@@ -9,13 +9,20 @@ const initialState = {
 const cart = (state = initialState, action) => {
     switch (action.type) {
         case ADD_ITEMS_CART: {
+            const currentItems = !state.items[action.payload.id]
+                ? [action.payload]
+                : [...state.items[action.payload.id].items, action.payload];
             const newItems = {
                 ...state.items,
-                [action.payload.id]: !state.items[action.payload.id]
-                    ? [action.payload]
-                    : [...state.items[action.payload.id], action.payload],
+                [action.payload.id]: {
+                    items: currentItems,
+                    totalPrice: currentItems.reduce((sum, elem) => elem.price + sum, 0),
+                },
             };
-            const obj = [].concat.apply([], Object.values(newItems));
+            const obj = [].concat.apply(
+                [],
+                Object.values(newItems).map((elem) => elem.items),
+            );
             return {
                 ...state,
                 items: newItems,
@@ -23,10 +30,14 @@ const cart = (state = initialState, action) => {
                 totalCount: obj.length,
             };
         }
-        case SET_TOTAL_PRICE:
-            return { ...state, totalPrice: action.payload };
-        case SET_TOTAL_COUNT:
-            return { ...state, totalCount: action.payload };
+        case CLEAR_CART: {
+            return {
+                ...state,
+                items: {},
+                totalCount: 0,
+                totalPrice: 0,
+            };
+        }
         default:
             return state;
     }

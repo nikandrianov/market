@@ -1,0 +1,40 @@
+.cart {
+    margin: 0 auto;
+    width: 560px;
+    text-align: center;
+    min-height: calc(100vh - 50px);
+    h2 {
+        font-size: 24px;
+        color: black;
+        margin-bottom: 50px;
+    }
+}
+
+.button_back {
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 10px 20px;
+    min-width: 100px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    border: 1px solid transparent;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    border-color: rgb(153, 153, 153);
+    span {
+        color: rgb(153, 153, 153);
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &:hover {
+        background-color: rgb(153, 153, 153);
+        span {
+            color: #fff;
+        }
+    }
+}
