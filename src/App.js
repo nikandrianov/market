@@ -9,12 +9,14 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <Header />
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/cart" component={Cart} />
-                </Switch>
-                <Footer />
+                <div className="wrapper">
+                    <Header />
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/cart" component={Cart} />
+                    </Switch>
+                    <Footer />
+                </div>
             </div>
         </Router>
     );
