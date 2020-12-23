@@ -1,7 +1,19 @@
 import React from 'react';
 import style from './cart-item.module.scss';
 
-const CartItem = ({ name, img, totalPrice, totalCount }) => {
+const CartItem = ({ id, name, img, totalPrice, totalCount, onRemove, onPlus, onMinus }) => {
+    const handleRemoveClick = () => {
+        onRemove(id);
+    };
+
+    const handlePlusClick = () => {
+        onPlus(id);
+    };
+
+    const handleMinusClick = () => {
+        onMinus(id);
+    };
+
     return (
         <div className={style.item}>
             <div className={style.item_img}>
@@ -11,15 +23,21 @@ const CartItem = ({ name, img, totalPrice, totalCount }) => {
                 <h3>{name}</h3>
             </div>
             <div className={style.count}>
-                <div className={style.button_minus}>-</div>
+                <button className={style.button_minus} onClick={handleMinusClick}>
+                    -
+                </button>
                 <b>{totalCount}</b>
-                <div className={style.button_plus}>+</div>
+                <button className={style.button_plus} onClick={handlePlusClick}>
+                    +
+                </button>
             </div>
             <div className={style.item_price}>
                 <b>{totalPrice} ₽</b>
             </div>
             <div className={style.item_remove}>
-                <div className={style.button_remove}>x</div>
+                <button className={style.button_remove} onClick={handleRemoveClick}>
+                    x
+                </button>
             </div>
         </div>
     );
