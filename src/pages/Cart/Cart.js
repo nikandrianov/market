@@ -2,7 +2,7 @@ import React from 'react';
 import style from './cart.module.scss';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { clearCart } from '../../redux/actions/cart';
+import { clearCart, removeCartItem, plusCartItem, minusCartItem } from '../../redux/actions/cart';
 
 import CartItem from '../../components/CartItem/CartItem';
 import CartFree from '../CartFree';
@@ -18,6 +18,20 @@ const Cart = () => {
         if (window.confirm('Вы уверены что хотите очистить корзину?')) {
             dispatch(clearCart());
         }
+    };
+
+    const onRemoveItem = (id) => {
+        if (window.confirm('Вы уверены что хотите удалить товар?')) {
+            dispatch(removeCartItem(id));
+        }
+    };
+
+    const onPlusItem = (id) => {
+        dispatch(plusCartItem(id));
+    };
+
+    const onMinusItem = (id) => {
+        dispatch(minusCartItem(id));
     };
 
     return (
@@ -37,6 +51,9 @@ const Cart = () => {
                                 {...obj}
                                 totalPrice={items[obj.id].totalPrice}
                                 totalCount={items[obj.id].items.length}
+                                onRemove={onRemoveItem}
+                                onPlus={onPlusItem}
+                                onMinus={onMinusItem}
                             />
                         ))}
                     </div>

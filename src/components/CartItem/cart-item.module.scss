@@ -1,16 +1,8 @@
 @mixin btn-count {
     border-radius: 30px;
-    padding: 10px 20px;
-    min-width: 100px;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
     border: 1px solid transparent;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
     height: 32px;
     min-width: 32px;
     padding: 0;
@@ -19,6 +11,7 @@
     border-color: #333;
     color: #333;
     font-weight: 900;
+    font-size: 14px;
     &:hover {
         background-color: #333;
         color: #fff;
